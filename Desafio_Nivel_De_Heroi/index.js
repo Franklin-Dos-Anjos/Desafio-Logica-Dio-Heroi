@@ -26,7 +26,7 @@ Se XP for maior ou igual a 10.001 = Radiante
 Ao final deve se exibir uma mensagem:
 "O Herói de nome **{nome}** está no nível de **{nivel}**"*/
 
-let nome = "Frankão";
+/*let nome = "Frankão";
 let xp = 0;
 let nivel = "";
 
@@ -52,3 +52,36 @@ for (let xp = 0; xp <= 9000; xp += 1) {
   }
 }
 console.log(`O Herói de nome ${nome} está no nível de ${nivel}`);
+*/
+let nome = "Frankão";
+let xp = 0;
+let nivel = "";
+
+let ArrayElo = [
+  { nomeelo: "ferro", max: 1000 },
+  { nomeelo: "bronze", max: 2000 },
+  { nomeelo: "prata", max: 5000 },
+  { nomeelo: "ouro", max: 7000 },
+  { nomeelo: "platina", max: 8000 },
+  { nomeelo: "ascendente", max: 9000 },
+  { nomeelo: "imortal", max: 10000 },
+  { nomeelo: "radiante", max: Infinity },
+];
+
+for (let xp = 0; xp <= 12000; xp += 2500) {
+  for (let elo = 0; elo < ArrayElo.length; elo++) {
+    if (xp <= ArrayElo[elo].max) {
+      nivel = ArrayElo[elo].nomeelo;
+      break;
+    }
+  }
+  console.log(`XP ${xp} é = ${nivel}`);
+}
+/*for (let elo = 0; elo < ArrayElo.length; elo++) {
+  if (xp <= ArrayElo[elo].max) {
+    nivel = ArrayElo[elo].nomeelo;
+    break;
+  }
+}
+console.log(`O Herói de nome ${nome} está no nível de ${nivel}`);
+*/
